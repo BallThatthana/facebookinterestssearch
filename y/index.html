@@ -1,89 +1,108 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
+<html lang="en, th">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css"/>
+    <title>เครื่องมือค้นหาความสนใจ Facebook ที่ซ่อนอยู่ เอาไปยิงเเอดเเม่น - Martech Secrets by Ball Thatthana</title>
+    <meta name="description" content="ระบบค้นหาความสนใจ Facebook ที่ซ่อนอยู่ สำหรับเอาไปยิงเเอดเฟสบุ๊ก โดย Ball Thatthana Facebook Hidden Interest by Ball Thatthana">
+    <meta name="keywords" content="ความสนใจ Facebook, กลุ่มเป้าหมาย Facebook, ความสนใจเฟซบุ๊ก, Facebook hidden interest, Ball Thatthana, ยิงเเอด Facebook, martech, marketing technology">
+    <meta name="author" content="Ball Thatthana">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js" type="text/javascript"></script>
+    <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js" type="text/javascript"></script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-NK79K2Z');</script>
+    <!-- End Google Tag Manager -->
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TT4M9TR');</script>
+    <!-- End Google Tag Manager -->
+</head>
+    <body>
+        <!-- Google Tag Manager (noscript) -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NK79K2Z"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
+        <!-- Google Tag Manager (noscript) -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TT4M9TR"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
+        <div id="topbar">
+            <img src="../asset/ballthatthanalogo.png" id="ball-logo">
+            <span id="topbar-title">Martech Secrets</span>
+        </div>
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/9.10.0/firebase-app-compat.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/9.10.0/firebase-auth-compat.js"></script>
-    <script defer src="/__/firebase/9.10.0/firebase-database-compat.js"></script>
-    <script defer src="/__/firebase/9.10.0/firebase-firestore-compat.js"></script>
-    <script defer src="/__/firebase/9.10.0/firebase-functions-compat.js"></script>
-    <script defer src="/__/firebase/9.10.0/firebase-messaging-compat.js"></script>
-    <script defer src="/__/firebase/9.10.0/firebase-storage-compat.js"></script>
-    <script defer src="/__/firebase/9.10.0/firebase-analytics-compat.js"></script>
-    <script defer src="/__/firebase/9.10.0/firebase-remote-config-compat.js"></script>
-    <script defer src="/__/firebase/9.10.0/firebase-performance-compat.js"></script>
-    <!-- 
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+        <p>Github firebase deploy from DEV AGAIN!!!!!! ok?</p>
 
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
-    </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
+        <p id="text-inputfield"></p>
+        <div class="col-md-12 mx-auto" id="title-div">
+                <h2 class="title">เครื่องมือหาความสนใจที่ซ่อนใน Facebook ยิงเเอดโดยไม่ซ้ำกลุ่มเป้าหมายของคนส่วนใหญ่</h2>
+                <p class="title-ball">By Ball Thatthana</p> 
+        </div>
+        <div class="col-md-8 mx-auto">
+            <div>
+                <h3 class="title">ความสนใจที่ซ่อนใน Facebook คืออะไร? </h3>
+            </div>
+                <p style="text-align: center;">เวลาที่เราเลือกกลุ่มความสนใจหรือกลุ่มเป้าหมายใน Facebook ระบบจะเเสดงสนใจเเนะนำที่เกี่ยวข้องกับ keyword หรือความสนใจที่เราพิมพ์ไปขึ้นมา</p>
+                <p style="text-align: center;">เเต่อาจจะเเสดงไม่หมด เพราะมีการกำหนดจำนวนการเเสดงผลกลุ่มความสนใจ + กลุ่มเป้าหมาย โดย Facebook ทำให้คนส่วนใหญ่เลือกกลุ่มความสนใจที่คล้ายๆกันหมด</p>
+                <p style="text-align: center;">ระบบนี้จะทำการดึงกลุ่มเป้าหมาย กลุ่มความสนใจ รวมถึงข้อมูลที่เกี่ยวข้องมาโชว์ทุกอย่าง ให้คุณเอาไปทำโฆษณากลุ่มเป้าหมายใหม่ๆที่น้อยคนใช้</p>
+            </div>
+        <div class="container col-md-12 mx-auto" style="text-align:center; margin: 60px 0;">
+            <strong><p id="sponsor-text">อยากให้ผมทำอะไรเเบบนี้มาเเบ่งบันอีก สนับสนุนผมได้โดยการกด Join ที่ช่อง Youtube ของผม <a href="https://www.youtube.com/channel/UCApfJLGPwZvp_Zqaigeo3TQ/join" target="_blank">Ball Thatthana</a></p></strong>
+        </div>
+    
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const loadEl = document.querySelector('#load');
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.firestore().doc('/foo/bar').get().then(() => { });
-        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        // firebase.analytics(); // call to activate
-        // firebase.analytics().logEvent('tutorial_completed');
-        // firebase.performance(); // call to activate
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-
-        try {
-          let app = firebase.app();
-          let features = [
-            'auth', 
-            'database', 
-            'firestore',
-            'functions',
-            'messaging', 
-            'storage', 
-            'analytics', 
-            'remoteConfig',
-            'performance',
-          ].filter(feature => typeof app[feature] === 'function');
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
-    </script>
-  </body>
+        <div class="col-md-8 mx-auto dark" id="seach-box">
+            <div id="input-section" class="col-md-10 mx-auto">
+                    <input type="text" id="input" placeholder="ค้นหาความสนใจลับที่นี่...">
+                    <!--<label>เปลี่ยนภาษา</label> -->
+                    <select id="lang" class="select" aria-label="Default select example" onchange="switchLang(), switchLang1()">
+                        <option class="select-option" value="th_TH">Thai</option>
+                        <option class="select-option" value="th_US">English</option>
+                    </select>
+            </div>
+            <div class="col-md-10 mx-auto" id="button">
+                    <button type="button" class="btn btn-primary" id="submit">ค้นหา</button>
+                    <button id="clear" class="btn btn-warning">เคลียร์</button>
+            </div>
+            <div class="container col-md-12 mx-auto" id="converrpage" style="color:white;">
+                <p style="margin:0; padding:0;">Powered by <strong><a href="https://converrpage.com" target="_blank" style="color:white;">ConverrPage Web Salepage</a></strong></p>
+                <p style="font-style: italic; margin:0; padding:0;">เว็บ-เซลเพจ ช่วยปิดการขาย เครื่องมือทำโฆษณาครบ</p>
+                <img src="../asset/logo-converrpage-menu-tab.png" id="converrpagelogo">
+            </div>
+        </div>
+        <div id="interest-result" class="col-md-8 mx-auto">
+            <div class="col-md-6 mx-auto" id="result">
+                <h3 id="interest-title">ความสนใจที่เกี่ยวข้อง<span id="title-interest"></span></h3>
+                <table id="table1" class="table-dark sortable">
+                    <thead id="thead" class="thead-striped">
+                            <th class="sorting" scope="col" style="width:33.333%;">ความสนใจ</th>
+                            <th class="sorting" scope="col" style="width:33.333%;">ขนาดมากสุด</th>
+                            <th class="sorting" scope="col" style="width:33.333%;">หมวดหมู่</th>
+                    </thead>
+                </table>
+            </div>
+            <div class="col-md-6 mx-auto" id="result1">
+                <h3 id="suggestinterest-title">ความสนใจที่เเนะนำ<span id="title-suggestion"></span></h3>
+                <table id="table2" class="table-dark sortable">
+                    <thead id="thead1" class="thead-striped">
+                            <th scope="col" style="width:50%;">ความสนใจ</th>
+                            <th scope="col" style="width:50%;">ความเกี่ยวข้อง</th>
+                    </thead>
+                </table>
+            </div>
+        </div>
+        <script src="script.js" type="text/javascript"></script>
+    </body>
 </html>
