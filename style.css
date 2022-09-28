@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+*{
+  font-family: 'Prompt';
+}
+
+body{
+  background-color: #dedede ;
+  padding: 0px 10px 30px;
+}
+
+#topbar{
+  padding: 10px 0 !important;
+  background-color: #17a2b8;
+  text-align: center;
+}
+
+#title-div{
+padding: 20px;
+}
+
+.title{
+  margin: 20px;
+  text-align: center;
+}
+
+.title-ball{
+  margin: 20px;
+  text-align: center;
+  font-size: large;
+  font-style: italic;
+}
+
+
+div #sponsor-text, #converrpage{
+  text-align: center;
+}
+#converrpage{
+  margin: 10px 0 30px;
+  padding: 10px 0;
+
+}
+#seach-box{
+    text-align: center;
+    margin: 40px 40px;
+    padding: 20px 0 10px;
+    background-color: #343a40;
+    border-radius: 8px;
+}
+
+#input-section{
+  padding: 20px 0px;
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center;
+}
+
+
+#input, #lang {
+  border-radius: 5px;
+  PADDING: 5PX 0;
+  MARGIN: 5PX 10px;
+  border: 1px solid gainsboro;
+  height: 50px;
+}
+
+#input{
+  width: 80%;
+  padding: 0 8px;
+}
+
+#lang {
+border: none;
+background-color: #17a2b8;
+color: white;
+font-size: 16px;
+text-align: center;
+}
+
+
+#button {
+  display: flex;
+  margin: 10px 5px;
+  padding: 10px 0;
+  align-content: center;
+  justify-content: center;
+}
+
+#submit, #clear {
+  width: 25%;
+  margin: 2px;
+  font-size: 18px;
+}
+
+@media screen and (max-width: 600px) {
+  #ball-logo,#topbar-title{
+    width: 60px;
+    font-size: large;
+    color: white;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  #ball-logo, #topbar-title{
+    width: 100px;
+    font-size: xx-large;
+    color: white;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .title{
+    font-size: large;
+    font-style: bold;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .title{
+    font-size: x-large;
+    font-style: bold;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #sponsor-text{
+    font-size: small;
+    font-style: bold;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  #sponsor-text{
+    font-size: medium;
+    font-style: bold;
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  #converrpagelogo{
+    width: 100px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  #converrpagelogo{
+    width: 150px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #result, #result1, #converrpage{
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #interest-title, #suggestinterest-title{
+    font-size: large;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  #interest-title, #suggestinterest-title{
+    font-size: x-large;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #interest-result{
+    display: block;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  #interest-result{
+    display: flex;
+  }
+}
+
+
+/*@media screen and (min-width: 601px) {
+  div #input {
+      width: 50%;
+  }
+}
+*/
+
+
+tr {
+  padding: 20px;
+  height: 50px;
+}
+
+tr :last-child{
+  height: 50px 70px;
+}
+
+#table1, #table2{
+  width: 100%;
+  border-radius: 8px;
+  padding: 20px 0;
+  margin: 10px 0;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+
+
+td {
+  text-align: center;
+}
+
+::placeholder{
+  padding: 5px;
+}
+
+thead, #th {
+  padding: 10px 5px;
+  text-align: center;
+}
+
+.select.option:hover {
+  background-color: black;
+  line-height: 3;
+}
+
+#interest-result{
+  justify-content: center;
+  width: 100%;
+  padding: 0;
+}
+
+#result,#result1 {
+  padding:4px 2px;
+  margin: 0;
+}
+
+div#interest-result h3{
+  text-align: center;
+}
+
+form-select{
+  padding: 10px 0;
+}
+
+#title-interest, #title-suggestion{
+  font-size: large;
+}
