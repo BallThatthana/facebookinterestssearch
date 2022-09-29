@@ -10,6 +10,7 @@ let select = document.getElementById('lang');
 let text = document.getElementById('text-inputfield')
 let url = new URL (`https://graph.facebook.com/search?type=adinterest&q=&limit=10000&locale=th_TH&access_token=2261992270589453|ic8EkSE5wf4mcH5GSqLbfIDUPY0`);
 let url1 = new URL (`https://graph.facebook.com/search?type=adinterestsuggestion&interest_list=&limit=10000&locale=th_TH&access_token=2261992270589453|ic8EkSE5wf4mcH5GSqLbfIDUPY0`); 
+
 inputField.onkeyup = function(){
   keyword = inputField.value;
 }
