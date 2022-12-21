@@ -34,7 +34,7 @@ function insertKeyword(){
   url.toString();
   return url
 }
-function insertKeyword1(){
+function insertKeyword1(url1){
   url1.searchParams.set('adinterestsuggestion&interest_list', keyword);
   url1.toString();
   return url1
@@ -105,13 +105,14 @@ function displayData(data){
           } showInterestAfterDelete();
 
           } else {
-            span2.innerHTML = "";
+    
             showInterest();
             countInterest()
           } 
 
 } 
 function getInterestSuggestion(){
+  
   span1.innerHTML = "";
   getTable2.innerHTML =''
 
@@ -189,7 +190,15 @@ clearBtn.addEventListener('click',()=> {
   $("#title-interest, #title-suggestion").html('');
 })
 //show interest number
-function countInterest(){
-  span.innerHTML = ' (จำนวน ' + tableRow + ")";
-  span1.innerHTML = ' (จำนวน ' + tableRow1 + ")";
+function countInterest() {
+  const tableRow = getTable.rows.length - 1;
+  const tableRow1 = getTable2.rows.length - 1;
+  const resultDiv = document.getElementsByTagName('span');
+
+  if (tableRow < 0 && tableRow1 < 0) {
+    resultDiv.innerHTML = '';
+  } else {
+    span.innerHTML = ` (จำนวน ${tableRow})`;
+    span1.innerHTML = ` (จำนวน ${tableRow1})`;
+  }
 }
