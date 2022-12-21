@@ -5,6 +5,10 @@ let getTable2 = document.getElementById('table2');
 let getTbody1 = document.getElementById('tbodyEl');
 let getTbody2 = document.getElementById('tbodyEl1');
 let inputField = document.getElementById('input');
+let tableRow = getTable.rows.length - 1;
+let span = document.getElementById('title-interest')
+let tableRow1 = getTable2.rows.length - 1;
+let span1 = document.getElementById('title-suggestion')
 let keyword;
 let select = document.getElementById('lang');
 let text = document.getElementById('text-inputfield')
@@ -39,7 +43,8 @@ function insertKeyword1(){
 
 function getInterest(){
 
-  table1.innerHTML =''
+  span.innerHTML = "";
+  getTable.innerHTML =''
 
 function insertKeyword(){
     url.searchParams.set('q', '['+keyword+']');
@@ -68,15 +73,13 @@ function displayData(data){
 
   function showInterest(){
 
-    table1.innerHTML =''
+    getTable.innerHTML =''
 
     let interestData = data.data; 
 
     for (let i = 0; i < data.data.length; i++){
-
-      let table1 = document.getElementById('table1')
     
-      table1.innerHTML += `
+      getTable.innerHTML += `
         <tr>
           <td><strong>${interestData[i].name}</strong></td>
           <td>${interestData[i].audience_size_upper_bound}</td>
@@ -109,8 +112,8 @@ function displayData(data){
 
 } 
 function getInterestSuggestion(){
-
-  table2.innerHTML =''
+  span1.innerHTML = "";
+  getTable2.innerHTML =''
 
   function insertKeyword1(){
     url1.searchParams.set('interest_list', '["'+keyword+'"]');
@@ -142,10 +145,8 @@ function displayData1(data1){
     let interestData1 = data1.data; 
 
     for (let i = 0; i < data1.data.length; i++){
-
-      let table2 = document.getElementById('table2')
     
-      table2.innerHTML += `
+      getTable2.innerHTML += `
         <tr>
           <td><strong>${interestData1[i].name}</strong></td>
           <td>${interestData1[i].path}</td>
@@ -170,7 +171,7 @@ function displayData1(data1){
           } showInterestAfterDelete1();
 
           } else {
-            span1.innerHTML = "";
+
             showInterest1();
             countInterest();
           } 
@@ -189,13 +190,6 @@ clearBtn.addEventListener('click',()=> {
 })
 //show interest number
 function countInterest(){
-  let table = document.getElementById('table1');
-  let tableRow = table.rows.length - 1;
-  let span = document.getElementById('title-interest')
   span.innerHTML = ' (จำนวน ' + tableRow + ")";
-  
-  let table1 = document.getElementById('table2');
-  let tableRow1 = table1.rows.length - 1;
-  let span1 = document.getElementById('title-suggestion')
   span1.innerHTML = ' (จำนวน ' + tableRow1 + ")";
 }
