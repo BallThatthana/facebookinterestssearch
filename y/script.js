@@ -35,7 +35,11 @@ function insertKeyword1(){
   url1.toString();
   return url1
 } 
+
+
 function getInterest(){
+
+  table1.innerHTML =''
 
 function insertKeyword(){
     url.searchParams.set('q', '['+keyword+']');
@@ -63,6 +67,9 @@ function insertKeyword(){
 function displayData(data){
 
   function showInterest(){
+
+    table1.innerHTML =''
+
     let interestData = data.data; 
 
     for (let i = 0; i < data.data.length; i++){
@@ -101,6 +108,8 @@ function displayData(data){
 
 } 
 function getInterestSuggestion(){
+
+  table2.innerHTML =''
 
   function insertKeyword1(){
     url1.searchParams.set('interest_list', '["'+keyword+'"]');
