@@ -190,10 +190,12 @@ function countInterest(){
   let table = document.getElementById('table1');
   let tableRow = table.rows.length - 1;
   let span = document.getElementById('title-interest')
+  span.innerHTML = " (จำนวน )";
   span.innerHTML = ' (จำนวน ' + tableRow + ")";
   
   let table1 = document.getElementById('table2');
   let tableRow1 = table1.rows.length - 1;
   let span1 = document.getElementById('title-suggestion')
+  span1.innerHTML = " (จำนวน )";
   span1.innerHTML = ' (จำนวน ' + tableRow1 + ")";
 }
