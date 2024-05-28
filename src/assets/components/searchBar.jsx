@@ -24,7 +24,7 @@ function SearchBar() {
   }
 
   return (
-    <div className="min-h-screen mt-4 flex flex-col items-center p-6 bg-gradient-to-r from-pink-100 via-purple-100 to-blue-100">
+    <div className="min-h-screen w-full mt-4 px-4 sm:px-0 flex flex-col items-center p-10 bg-gradient-to-r from-pink-100 via-purple-100 to-blue-100">
       <div className="w-full max-w-lg bg-white shadow-md rounded-lg p-8">
         <form className="space-y-6" onSubmit={searchInterest}>
           <h3 className="text-lg font-medium text-gray-700">Search Interest</h3>
@@ -54,17 +54,17 @@ function SearchBar() {
             <table className="min-w-full bg-white shadow-md rounded-lg overflow-hidden">
               <thead className="bg-purple-500 text-white">
                 <tr>
-                  <th className="px-6 py-3">Interest</th>
-                  <th className="px-6 py-3">Size</th>
-                  <th className="px-6 py-3">Topic</th>
+                  <th className="px-3 py-3">Interest</th>
+                  <th className="px-3 py-3">Size</th>
+                  <th className="px-3 py-3">Topic</th>
                 </tr>
               </thead>
               <tbody>
                 {results.map((result) => (
                   <tr key={result.id} className="border-t">
-                    <td className="px-6 py-4">{result.name}</td>
-                    <td className="px-6 py-4">{result.audience_size_upper_bound}</td>
-                    <td className="px-6 py-4">{result.topic}</td>
+                    <td className="px-4 py-4 text-sm text-center">{result.name}</td>
+                    <td className="px-4 py-4 text-sm text-center">{result.audience_size_upper_bound}</td>
+                    <td className="px-4 py-4 text-sm text-center">{result.topic}</td>
                   </tr>
                 ))}
               </tbody>
