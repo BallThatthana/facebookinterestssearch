@@ -18,7 +18,7 @@ function App() {
       {/* End Google Tag Manager (noscript) */}
       
       <div id="topbar">
-        <img src="./src/assets/images.png" id="ball-logo" alt="Logo"/>
+        <img src="/assets/images.png" id="ball-logo" alt="Logo"/>
         <span id="topbar-title"> Facebook Hidden Interest Search</span>
       </div>
       
