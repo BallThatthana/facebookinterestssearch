@@ -7,8 +7,6 @@ function SearchBar() {
 
   const apiToken = import.meta.env.VITE_FB_TOKEN;
 
-  console.log("API Token:", apiToken);
-
   function handleChange(event) {
     setKeyword(event.target.value);
   }
@@ -25,37 +23,48 @@ function SearchBar() {
     }
   }
 
-  console.log("keyword", keyword);
-
   return (
-    <div className='search-section mx-auto'>
-      <div className='searchbar rounded-xl'>
-        <form className="form py-6 px-6" onSubmit={searchInterest}>
-          <h3 className="pb-6 text-sm">Search Interest</h3>
-          <span>
-            <input onChange={handleChange} name="keyword" id="keyword" value={keyword} placeholder='Type in a keyword'/>
-            <button onClick={searchInterest} id="seach-btn" className='bg-blue-500'>Click to Search</button>
-          </span>
+    <div className="min-h-screen mt-4 flex flex-col items-center p-6 bg-gradient-to-r from-pink-100 via-purple-100 to-blue-100">
+      <div className="w-full max-w-lg bg-white shadow-md rounded-lg p-8">
+        <form className="space-y-6" onSubmit={searchInterest}>
+          <h3 className="text-lg font-medium text-gray-700">Search Interest</h3>
+          <div className="flex items-center space-x-4">
+            <input
+              onChange={handleChange}
+              name="keyword"
+              id="keyword"
+              value={keyword}
+              placeholder="Type in a keyword"
+              className="flex-1 p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
+            />
+            <button
+              type="submit"
+              className="bg-purple-500 text-white px-4 py-2 rounded-lg hover:bg-purple-600 focus:outline-none focus:ring-2 focus:ring-purple-500"
+            >
+              Search
+            </button>
+          </div>
         </form>
       </div>
+      
       {results.length > 0 && (
-        <div className='search-results mx-auto w-50 bg-grey-200 mt-4'>
-          <h2 className='text-center bg-black text-white'>Results</h2>
-          <div className='table-container'>
-            <table className='table-auto mx-auto mt-6 w-75'>
-              <thead>
+        <div className="w-full max-w-2xl mt-8">
+          <h2 className="text-xl font-semibold text-gray-700 text-center">Results</h2>
+          <div className="overflow-x-auto mt-4">
+            <table className="min-w-full bg-white shadow-md rounded-lg overflow-hidden">
+              <thead className="bg-purple-500 text-white">
                 <tr>
-                  <th className='w-1/3'>Interest</th>
-                  <th className='w-1/3'>Size</th>
-                  <th className='w-1/3'>Topic</th>
+                  <th className="px-6 py-3">Interest</th>
+                  <th className="px-6 py-3">Size</th>
+                  <th className="px-6 py-3">Topic</th>
                 </tr>
               </thead>
               <tbody>
                 {results.map((result) => (
-                  <tr key={result.id}>
-                    <td>{result.name}</td>
-                    <td>{result.audience_size_upper_bound}</td>
-                    <td>{result.topic}</td>
+                  <tr key={result.id} className="border-t">
+                    <td className="px-6 py-4">{result.name}</td>
+                    <td className="px-6 py-4">{result.audience_size_upper_bound}</td>
+                    <td className="px-6 py-4">{result.topic}</td>
                   </tr>
                 ))}
               </tbody>
