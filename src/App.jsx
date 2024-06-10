@@ -38,7 +38,7 @@ function App() {
       <SearchBar />
 
       {/* Footer */}
-      <footer className="w-full max-w-2xl text-center mt-8">
+      <footer className="w-full max-w-2xl text-center py-4 mx-auto">
         <p className="text-gray-600">&copy; 2024 Bon Thatthana. All rights reserved.</p>
       </footer>
     </div>

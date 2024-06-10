@@ -6,3 +6,7 @@
 *{
   font-family: 'Prompt';
 }
+
+.search-btn {
+  margin-left: 0 !important;
+}
