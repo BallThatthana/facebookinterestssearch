@@ -25,7 +25,7 @@ function App() {
         <h2 className="text-2xl font-semibold text-gray-700">
           Target the audience that most people don't know exist!
         </h2>
-        <p className="mt-2 text-lg text-gray-600">By Bon Thatthana</p>
+        <p className="mt-2 text-lg text-gray-600">By <a href="https://bonthatthana.netlify.app" target='_blank'>Bon Thatthana</a></p>
       </div>
 
       <div className="w-full sm:w-2/3 text-center mt-8 px-4 sm:px-0 pb-4">
@@ -39,7 +39,7 @@ function App() {
 
       {/* Footer */}
       <footer className="w-full max-w-2xl text-center py-4 mx-auto">
-        <p className="text-gray-600">&copy; 2024 Bon Thatthana. All rights reserved.</p>
+        <p className="text-gray-600">&copy; 2024 <a href="https://bonthatthana.netlify.app" target='_blank'>Bon Thatthana</a>. All rights reserved.</p>
       </footer>
     </div>
   );

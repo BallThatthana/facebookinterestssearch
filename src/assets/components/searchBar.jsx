@@ -28,22 +28,26 @@ function SearchBar() {
       <div className="w-full max-w-lg bg-white shadow-md rounded-lg p-8">
         <form className="space-y-6" onSubmit={searchInterest}>
           <h3 className="text-lg font-medium text-gray-700">Search Interest</h3>
-          <div className="flex flex-col sm:flex-row items-center space-x-4">
+          <div className="flex flex-col justify-between sm:flex-row items-center gap-2 m-auto">
+          <div className="w-full sm:w-2/3 items-center flex">
             <input
               onChange={handleChange}
               name="keyword"
               id="keyword"
               value={keyword}
               placeholder="Type in a keyword"
-              className="w-full flex-1 p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 mb-4 sm:mb-none"
-            />
-           <button
-            type="submit"
-            className="search-btn bg-purple-500 text-white px-4 py-2 rounded-lg hover:bg-purple-600 focus:outline-none focus:ring-2 focus:ring-purple-500 w-full sm:w-1/3 mx-0 sm:mx-4"
+              className="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 mb-4 sm:mb-0 h-12"
+            />  
+          </div>
+          <div className="w-full sm:w-1/3 justify-center items-center flex">
+            <button
+              type="submit"
+              className="search-btn w-full h-12 bg-purple-500 text-white px-4 py-2 rounded-lg hover:bg-purple-600 focus:outline-none focus:ring-2 focus:ring-purple-500"
             >
               Search
             </button>
           </div>
+        </div>
         </form>
       </div>
       
