@@ -14,6 +14,7 @@ function SearchBar({ onVectorChange }) {
   const apiToken = import.meta.env.VITE_FB_TOKEN;
 
   // Fully expanded global market language map supported by Facebook Graph API
+  ///to deploy only
   const languageOptions = [
     { name: 'English (US/Global)', code: 'en_US' },
     { name: 'English (UK)', code: 'en_GB' },
