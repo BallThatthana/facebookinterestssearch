@@ -53,7 +53,7 @@ function App() {
           <div className="flex items-center gap-3">
             <img src="/assets/images.png" alt="Logo" className="w-8 h-8 rounded" />
             <span className="text-lg font-extrabold text-slate-900 tracking-tight">
-              FB Audience Explorer
+              Meta InterestExplorer
             </span>
           </div>
           <a 
