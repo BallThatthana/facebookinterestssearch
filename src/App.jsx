@@ -52,7 +52,7 @@ function App() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <img src="/assets/images.png" alt="Logo" className="w-8 h-8 rounded" />
-            <span className="text-lg font-extrabold text-slate-900 tracking-tight">
+            <span className="text-base sm:text-lg md:text-xl font-extrabold text-slate-900 tracking-tight">
               Meta InterestExplorer
             </span>
           </div>

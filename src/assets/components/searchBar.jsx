@@ -11,8 +11,6 @@ function SearchBar({ onVectorChange }) {
   const [visibleCount, setVisibleCount] = useState(10);
   const [activeParent, setActiveParent] = useState(null);
 
-  const apiToken = import.meta.env.VITE_FB_TOKEN;
-
   // Fully expanded global market language map supported by Facebook Graph API
   ///to deploy only
   const languageOptions = [
@@ -71,6 +69,7 @@ function SearchBar({ onVectorChange }) {
     }
   }
 
+  // --- UPDATED MAIN SEARCH FUNCTION ---
   async function searchInterest(event) {
     event.preventDefault();
     if (!keyword.trim()) return;
@@ -81,45 +80,39 @@ function SearchBar({ onVectorChange }) {
     setActiveParent(null);
     
     try {
-      let ad_interest_url;
-
-      // Handle the strict array input requirement for the validation endpoint
-      if (searchType === 'adinterestvalid') {
-        ad_interest_url = new URL(
-          `https://graph.facebook.com/search?type=adinterestvalid&interest_list=["${encodeURIComponent(keyword)}"]&locale=${locale}&access_token=${apiToken}`
-        );
-      } else {
-        // Standard query endpoint for interests, job titles, and majors
-        ad_interest_url = new URL(
-          `https://graph.facebook.com/search?type=${searchType}&q=${encodeURIComponent(keyword)}&limit=10000&locale=${locale}&access_token=${apiToken}`
-        );
-      }
-
-      const interest_result = await fetch(ad_interest_url);
-      const result = await interest_result.json();
+      // Call your secure Netlify Serverless Function instead of Facebook directly
+      const response = await fetch(
+        `/.netlify/functions/facebookSearch?type=${searchType}&keyword=${encodeURIComponent(keyword)}&locale=${locale}`
+      );
+      
+      const result = await response.json();
       setResults(result.data || []);
-      console.log("results", result);
+      console.log("results from secure backend", result);
     } catch (error) {
-      console.error("Error fetching data from FB API:", error);
+      console.error("Error fetching data from Netlify backend:", error);
       setResults([]);
     } finally {
       setIsLoading(false);
     }
   }
 
+  // --- UPDATED DEEP SUGGESTION FUNCTION ---
   async function fetchDeepSuggestions(interestId, interestName) {
     setIsSuggesting(true);
     setVisibleCount(10);
     setActiveParent(interestName);
     
     try {
-      let suggestions_url = new URL(
-        `https://graph.facebook.com/search?type=adinterestsuggestion&interest_list=["${interestId}"]&limit=1000&locale=${locale}&access_token=${apiToken}`
+      // Pass the specific interestList array string format required by the API
+      const listParam = `["${interestId}"]`;
+      
+      const response = await fetch(
+        `/.netlify/functions/facebookSearch?type=adinterestsuggestion&interestList=${encodeURIComponent(listParam)}&locale=${locale}`
       );
-      const suggestions_result = await fetch(suggestions_url);
-      const result = await suggestions_result.json();
+      
+      const result = await response.json();
       setResults(result.data || []);
-      console.log("results", result);
+      console.log("Deep suggestions from secure backend", result);
     } catch (error) {
       console.error("Error fetching deep suggestions:", error);
     } finally {
